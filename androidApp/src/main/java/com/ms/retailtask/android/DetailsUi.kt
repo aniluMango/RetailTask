@@ -39,7 +39,7 @@ import model.RetailTaskModel
 
 @Composable
 fun DetailsUI(navController: NavHostController?, string: String?) {
-    val model = RetailsTaskRepo.getTaskByID(string)
+    val model = RetailsTaskRepo().getTaskByID(string)
     val scrollState = rememberScrollState()
     Scaffold(
         topBar = {

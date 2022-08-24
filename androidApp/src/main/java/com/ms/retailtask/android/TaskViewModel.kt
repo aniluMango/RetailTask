@@ -15,7 +15,7 @@ class TaskViewModel :ViewModel(){
     private val _uiState = MutableStateFlow<TaskState>(TaskState.Empty)
     // The UI collects from this StateFlow to get its state updates
     val uiState: StateFlow<TaskState> = _uiState
-    val repo = RetailsTaskRepo
+    val repo = RetailsTaskRepo()
     init {
         _uiState.value = TaskState.Process
         viewModelScope.launch(Dispatchers.IO) {

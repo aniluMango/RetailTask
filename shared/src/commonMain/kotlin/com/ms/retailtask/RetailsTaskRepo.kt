@@ -2,9 +2,10 @@ package com.ms.retailtask
 
 import model.RetailTaskModel
 
-object RetailsTaskRepo {
+class RetailsTaskRepo {
 
     val list = arrayListOf<RetailTaskModel>()
+
     fun getToDayTaskList():ArrayList<RetailTaskModel>{
         list.clear()
         list.add(RetailTaskModel("1","Task Retails Title",20,Constant.urgent))
